@@ -1,0 +1,14 @@
+{
+  "name": "koa-oicq",
+  "version": "0.2.2",
+  "description": "模仿koa封装oicq(qqbot)的框架",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "author": "烟云雾沧海",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^17.0.23",
+    "commander": "^9.1.0",
+    "oicq": "^2.2.1"
+  }
+}
