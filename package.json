@@ -10,5 +10,19 @@
     "@types/node": "^17.0.23",
     "commander": "^9.1.0",
     "oicq": "^2.2.1"
-  }
+  },
+  "keywords": [
+    "QQ机器人",
+    "QQ框架",
+    "模仿koa"
+  ],
+  "repository": "https://github.com/yanyunwu/koa-oicq.git",
+  "files": [
+    "lib",
+    "index.d.ts",
+    "index.js",
+    "package.json",
+    "README.md",
+    "test.js"
+  ]
 }
