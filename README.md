@@ -2,7 +2,11 @@
 
 
 
-前言：koa-oicq是基于[takayama-lily]: https://github.com/takayama-lily/oicq	"takayama-lily/oicq"所开发用于方便开发者的框架。正如项目名称一样，本框架是模仿koa所开发的。
+前言：koa-oicq是基于
+
+[takayama-lily]: https://github.com/takayama-lily/oicq
+
+所开发用于方便开发者的框架。正如项目名称一样，本框架是模仿koa所开发的。
 
 
 
