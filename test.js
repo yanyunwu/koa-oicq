@@ -40,7 +40,7 @@ app.onin('message.private', (event, bot) => {
     console.log(bot); // 当前登录qqbot对象，可调用所有api
     event.reply('私聊消息')
 })
-app.onin('asdas')
+app.onin('dasda',)
 
 // 调用后会在data目录下生成二维码，登录QQ扫码，控制台回车即可登录
 app.listen(2770315275);
