@@ -8,7 +8,6 @@
   "license": "MIT",
   "dependencies": {
     "@types/node": "^17.0.23",
-    "commander": "^9.1.0",
     "oicq": "^2.2.1"
   },
   "keywords": [

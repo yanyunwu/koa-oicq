@@ -2,7 +2,7 @@ const KoaOicq = require('.');
 
 const app = new KoaOicq();
 const { createEvent, customEvent } = KoaOicq;
-const msg = createEvent('message')
+const msg = createEvent('message');
 const custom = customEvent((ctx) => {
   if (ctx.rowMsg === 'ts') return true;
   else return false;
@@ -52,6 +52,10 @@ app.use(async (a, next) => {
 
 app.on('error', () => {
   console.log('有错误');
+})
+
+app.on('message.group', () => {
+  console.log(12371983182);
 })
 
 app.listen(2770315275);
