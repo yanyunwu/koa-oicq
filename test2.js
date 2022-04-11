@@ -1,11 +1,19 @@
 const KoaOicq = require('.');
 
 const app = new KoaOicq();
-const { createEvent } = KoaOicq;
+const { createEvent, customEvent } = KoaOicq;
 const msg = createEvent('message')
+const custom = customEvent((ctx) => {
+  if (ctx.rowMsg === 'ts') return true;
+  else return false;
+});
+
+custom.use(() => {
+  console.log('ccccc');
+})
 
 msg.use(async (a, next) => {
-  bb
+  console.log(a.primaryType);
   console.log(11);
   await next();
 
@@ -33,6 +41,7 @@ app.use(async (a, next) => {
 })
 
 app.use(msg.callback())
+app.use(custom.callback());
 
 app.use(async (a, next) => {
   // aa
@@ -45,4 +54,4 @@ app.on('error', () => {
   console.log('有错误');
 })
 
-app.listen();
+app.listen(2770315275);
