@@ -8,7 +8,7 @@ const custom = customEvent((ctx) => {
   else return false;
 });
 
-custom.use(() => {
+custom.use((ctx) => {
   console.log('ccccc');
 })
 
@@ -20,6 +20,7 @@ msg.use(async (a, next) => {
   console.log(22);
 })
 
+
 msg.use(async (a, next) => {
   console.log(33);
   await next();
@@ -29,6 +30,9 @@ msg.use(async (a, next) => {
 // msg.on('error', () => {
 //   console.log('子中间件有错误');
 // })
+
+app.use((ctx, next) => {
+})
 
 app.use(async (a, next) => {
   console.log(1);
@@ -50,11 +54,11 @@ app.use(async (a, next) => {
   console.log(4);
 })
 
-app.on('error', () => {
+app.on('error', (err, ctx) => {
   console.log('有错误');
 })
 
-app.on('message.group', () => {
+app.on('message.group', (ctx) => {
   console.log(12371983182);
 })
 
