@@ -9,6 +9,7 @@ import { EventEmitter } from 'events';
 
 type NoticeEvent = GroupNoticeEvent | FriendNoticeEvent;
 
+
 export type Context<T> = {
   /** 原生oicq event对象 */
   event: T,
@@ -63,6 +64,7 @@ export class Application {
   listen(num: number, config: Config): void;
   static createEvent<T extends keyof EventType>(event: T): EventType[T];
   static createEvent<T extends string>(event: Exclude<T, keyof EventType>): void;
+  @deprecated
   static customEvent(filter: (ctx: Context) => void): CustomClientEvent;
   on<T extends keyof PEventMap>(event: T, listener: (this: Client, event: EventMaptype<PEventMap<Client>[T]>, bot: Client) => void): void;
   on<S extends string | symbol>(event: S & Exclude<S, keyof PEventMap>, listener: (this: Client, ...args: any[]) => void): void;

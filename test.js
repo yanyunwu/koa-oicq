@@ -1,11 +1,12 @@
 const KoaOicq = require('.');
 const { createEvent } = require('.');
 
-const client = new KoaOicq();
+const client = new KoaOicq({
+  platform: 5
+});
 
 // 监听包括message | request | notice所有消息 systen推荐使用on监听
 client.use(async (ctx, next) => {
-  ctx.primaryType
   await next();
 });
 

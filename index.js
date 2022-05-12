@@ -1,2 +1,2 @@
-const KoaOicq = require('./lib/application')
+const KoaOicq = require('./lib/applicationV3')
 module.exports = KoaOicq;
