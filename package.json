@@ -23,5 +23,8 @@
     "package.json",
     "README.md",
     "testV3.js"
-  ]
+  ],
+  "devDependencies": {
+    "kocq-console": "^0.1.3"
+  }
 }
