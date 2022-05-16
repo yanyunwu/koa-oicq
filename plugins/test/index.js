@@ -1,7 +1,7 @@
-module.exports = function () {
+module.exports = function (log) {
   return function (ctx, next) {
     if (ctx.rowMsg === '2') {
-      ctx.reply('success');
+      ctx.reply(log);
     }
 
     next();

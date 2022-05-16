@@ -7,7 +7,7 @@ const app = new KoaOicq(2770315275, {
 // app.source('./plugins');
 app.source(path.resolve(__dirname, './plugins'));
 app.use('a');
-app.use('test');
+app.use('test', 'hhhh');
 app.use('kocq-console');
 
 app.listen();
