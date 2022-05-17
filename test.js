@@ -1,4 +1,4 @@
-const KoaOicq = require('.');
+const KoaOicq = require('.')
 const path = require('path')
 
 const app = new KoaOicq(2770315275, {

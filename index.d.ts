@@ -2,7 +2,7 @@
 
 import * as oicq from 'oicq'
 
-interface MessageContext extends Context {
+export interface MessageContext extends Context {
   postType: "message",
   event: oicq.GroupMessageEvent | oicq.PrivateMessageEvent | oicq.DiscussMessageEvent,
 
@@ -15,28 +15,28 @@ interface MessageContext extends Context {
   groupName: string,
 }
 
-interface RequestContext extends Context {
+export interface RequestContext extends Context {
   postType: "request",
   event: oicq.GroupRequestEvent | oicq.FriendRequestEvent,
 }
 
-interface NoticeContext extends Context {
+export interface NoticeContext extends Context {
   postType: "notice",
   event: oicq.GroupNoticeEvent | oicq.FriendNoticeEvent,
 }
 
-interface Context {
+export interface Context {
   bot: Kocq,
-  botId: number
+  botId: number,
   reply: (this: Event, message: string) => void,
-};
+}
 
-type MidFunction = (ctx: MessageContext | RequestContext | NoticeContext, next: Promise<any>) => void;
-interface MidConstructor {
+export type MidFunction = (ctx: MessageContext | RequestContext | NoticeContext, next?: Promise<any>) => void
+export interface MidConstructor {
   install(add: (mid: MidFunction) => void): void
 }
 
-class Kocq extends oicq.Client {
+export class Kocq extends oicq.Client {
 
   constructor(uin: number, conf?: oicq.Config)
 
@@ -55,4 +55,4 @@ class Kocq extends oicq.Client {
 
 }
 
-export = Kocq;
+export = Kocq
